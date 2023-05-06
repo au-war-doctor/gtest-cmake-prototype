@@ -6,3 +6,4 @@ main.o: main.c palindromenumber.h
 
 palindromenumber.o: palindromenumber.c palindromenumber.h
 	gcc -c -g palindromenumber.c
+
