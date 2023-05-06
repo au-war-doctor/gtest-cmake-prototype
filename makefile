@@ -1,5 +1,5 @@
 main: main.o palindromenumber.o
-	gcc -o main main.o util.o
+	gcc -o main main.o palindromenumber.o
 
 main.o: main.c palindromenumber.h
 	gcc -c -g main.c
