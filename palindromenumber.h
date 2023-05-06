@@ -1,0 +1,1 @@
+int palindromenumber(int num);
