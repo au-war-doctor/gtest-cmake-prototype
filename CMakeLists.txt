@@ -18,15 +18,13 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-set(
-    Headers 
-    palindromenumber.h
-)
-set (
-    Sources
-    palindromenumber.cc
-)
+set(Headers palindromenumber.h)
+set(Sources palindromenumber.cc)
 
-add_library(${This} STATIC ${Sources} ${Headers})
-
+include_directories(test)
+link_directories(test)
 add_subdirectory(test)
+
+add_library(primarytarget ${Sources} ${Headers})
+
+

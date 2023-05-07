@@ -1,8 +1,9 @@
 #ifndef PALINDROME_NUMBER_H
 #define PALINDROME_NUMBER_H
 
-extern int palindromenumber(int num);
-
+namespace mine{   
+    extern "C" int palindromenumber(int num);
+}
 
 
 
