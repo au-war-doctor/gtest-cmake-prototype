@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "palindromenumber.h"
 
 int palindromenumber(int num) {
     /* Here we are generating a new number (reverse_num)

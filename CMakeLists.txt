@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.14)
-project(c_unit_testing_sandbox)
+set(This c_unit_testing_sandbox)
+project(${This} C CXX)
 
+set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -15,14 +18,15 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(
-  hello_test
-  hello_test.cc
+set(
+    Headers 
+    palindromenumber.h
 )
-target_link_libraries(
-  hello_test
-  GTest::gtest_main
+set (
+    Sources
+    palindromenumber.cc
 )
 
-include(GoogleTest)
-gtest_discover_tests(hello_test)
+add_library(${This} STATIC ${Sources} ${Headers})
+
+add_subdirectory(test)
