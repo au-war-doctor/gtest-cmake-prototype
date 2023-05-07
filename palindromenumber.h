@@ -1,1 +1,1 @@
-int palindromenumber(int num);
+extern int palindromenumber(int num);
