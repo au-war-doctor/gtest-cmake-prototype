@@ -1,4 +1,4 @@
-#include "../palindromenumber.h"
+#include "palindromenumber.h"
 #include <gtest/gtest.h>
 
 

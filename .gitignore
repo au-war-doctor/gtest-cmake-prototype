@@ -4,3 +4,4 @@ main
 build/*
 *.xml
 .vscode/*
+lib/*

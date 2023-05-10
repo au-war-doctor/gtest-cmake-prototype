@@ -1,12 +1,9 @@
-cmake_minimum_required(VERSION 3.14)
+set(BINARY ${CMAKE_PROJECT_NAME}_test)
 
-set(This palindromenumbertest)
-set(Sources palindromenumbertest.cc)
+set(TEST_SOURCES palindromenumbertest.cc main.cc)
 
+add_executable(${BINARY} ${TEST_SOURCES})
 
-add_executable(testtarget ${Sources})
-target_link_libraries(testtarget PUBLIC primarytarget GTest::gtest_main)
-add_test(NAME ${This} COMMAND ${This})
+add_test(NAME ${BINARY} COMMAND ${BINARY})
 
-include(GoogleTest)
-gtest_discover_tests(testtarget)
+target_link_libraries(${BINARY} PUBLIC ${CMAKE_PROJECT_NAME}_lib gtest)
